@@ -19,4 +19,11 @@ public class Square extends Rectangle {
         super.setLength(length);
         super.setWidth(length);
     }
+
+    @Override
+    public String toString() {
+        return String.format("Square with width=%f which is a subclass off %s",
+                width, super.toString());
+    }
+
 }

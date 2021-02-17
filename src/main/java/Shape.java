@@ -1,6 +1,6 @@
-public class Shape {
-    private String color;
-    private boolean isFilled;
+public abstract class Shape {
+    protected String color;
+    protected boolean isFilled;
 
     public Shape() {
         color = "unknown";
@@ -11,6 +11,9 @@ public class Shape {
         this.color = color;
         this.isFilled = isFilled;
     }
+
+    abstract double getArea();
+    abstract double getPerimeter();
 
     public String getColor() {
         return color;
