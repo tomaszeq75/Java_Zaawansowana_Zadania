@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
+        circlesDemo();
+    }
+
+    private static void circlesDemo() {
         MovablePoint p1 = new MovablePoint(100, 100, 10, 20);
         MovableCircle c1 = new MovableCircle(p1, 50);
 
@@ -13,8 +17,18 @@ public class Main {
         c1.moveUp();
         System.out.println(c1);
 
-        MovableCircle c2 = new MovableCircle(10, 10, 1, 2, 5);
+        Movable c2 = new MovableCircle(10, 10, 1, 2, 5);
         System.out.println(c2);
+
+        ResizableCircle rc = new ResizableCircle(100);
+        System.out.println("\nrc: " + rc);
+        System.out.println(rc.getArea());
+        System.out.println(rc.getPerimeter());
+
+        rc.resize(15);
+        System.out.println("\nrc: " + rc);
+        System.out.println(rc.getArea());
+        System.out.println(rc.getPerimeter());
     }
 
     private static void lineDemo() {

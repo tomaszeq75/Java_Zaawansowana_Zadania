@@ -1,4 +1,5 @@
-public class Circle extends Shape{
+public class Circle extends Shape implements GeometricObject {
+
     private float radius;
 
     public Circle() {
