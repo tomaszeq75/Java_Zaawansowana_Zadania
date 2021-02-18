@@ -1,34 +1,42 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
-        Shape c = new Circle();
-        System.out.println(c.toString());
-        Shape c1 = new Circle("RED" , true,5f);
-        System.out.println(c1.toString());
+        MovablePoint p1 = new MovablePoint(100, 100, 10, 20);
+        MovableCircle c1 = new MovableCircle(p1, 50);
 
-        Shape r = new Rectangle();
-        System.out.println(r.toString());
-        Shape r1 = new Rectangle("blue", true, 5, 7);
-        System.out.println(r1.toString());
-        System.out.println(r1.getArea());
+        System.out.println(c1);
+        c1.moveDown();
+        System.out.println(c1);
+        c1.moveRight();
+        System.out.println(c1);
+        c1.moveLeft();
+        System.out.println(c1);
+        c1.moveUp();
+        System.out.println(c1);
 
-        Shape s = new Square("brown", true, 9);
-        System.out.println(s.toString());
-        Shape s1 = new Square();
-        System.out.println(s1.toString());
+        MovableCircle c2 = new MovableCircle(10, 10, 1, 2, 5);
+        System.out.println(c2);
+    }
 
+    private static void lineDemo() {
+        Point2D startPoint = new Point2D(10, 10);
+        Point2D endPoint = new Point2D(410, 310);
 
-        System.out.println("----------------");
+        Line l1 = new Line(startPoint, endPoint);
+        System.out.println("length: " + l1.getLength());
+        System.out.println("middle point: " + l1.getMiddlePoint());
 
-        List<Shape> shapes = new ArrayList<>(Arrays.asList(c, c1, r, r1, s, s1));
+        Line l2 = new Line(endPoint, startPoint);
+        System.out.println("length: " + l2.getLength());
+        System.out.println("middle point: " + l2.getMiddlePoint());
 
-        for (Shape shape : shapes) {
-            System.out.println(shape);
-            System.out.println(shape.getArea());
-            System.out.println(shape.getPerimeter());
-        }
+        Line l3 = new Line(10, 10, 310, 410);
+        System.out.println("length: " + l3.getLength());
+        System.out.println("middle point: " + l3.getMiddlePoint());
+
+        l3 = new Line(310, 10, 10, 410);
+        System.out.println("length: " + l3.getLength());
+        System.out.println("middle point: " + l3.getMiddlePoint());
+        System.out.println("middle point: " + l3.getMiddlePointB());
+        System.out.println(l3.getStartPoint() + " - " + l3.getEndPoint());
     }
 }

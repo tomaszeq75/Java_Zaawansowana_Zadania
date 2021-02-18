@@ -1,4 +1,4 @@
-public class Point3D extends Piont2D {
+public class Point3D extends Point2D {
     private float z;
 
     public Point3D() {

@@ -1,15 +1,15 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Piont2D {
+public class Point2D {
     protected float x;
     protected float y;
 
-    public Piont2D() {
+    public Point2D() {
         this.x = this.y = 0;
     }
 
-    public Piont2D(float x, float y) {
+    public Point2D(float x, float y) {
         this.x = x;
         this.y = y;
     }
