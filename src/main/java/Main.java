@@ -1,9 +1,26 @@
 public class Main {
     public static void main(String[] args) {
-        circlesDemo();
+        tryCatchDemo();
+
+    }
+
+    private static void tryCatchDemo() {
+        try {
+            System.out.println("try");
+            throw new ArithmeticException("Wyjątek");
+        } catch (ArithmeticException e) {
+            System.out.println("catch");
+            e.printStackTrace();
+            System.out.println("after e");
+        } catch (Exception e) {
+            System.out.println("exception");
+        } finally {
+            System.out.println("finally");
+        }
     }
 
     private static void circlesDemo() {
+
         MovablePoint p1 = new MovablePoint(100, 100, 10, 20);
         MovableCircle c1 = new MovableCircle(p1, 50);
 
