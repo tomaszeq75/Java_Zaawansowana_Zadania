@@ -1,7 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        tryCatchDemo();
 
+        threadsDemo1();
+    }
+
+    private static void threadsDemo1() {
+        final Pair pair = new Pair(0, 0);
+        new Thread(new DummyPairIncrementer(pair)).start();
+        new Thread(new DummyPairIncrementer(pair)).start();
     }
 
     private static void tryCatchDemo() {
