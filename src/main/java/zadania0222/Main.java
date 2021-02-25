@@ -22,6 +22,10 @@ public class Main {
         Collections.sort(computers);
         System.out.println(computers);
 
+        Laptop laptop = new Laptop("AMD", "GeForce", "Dell", "2", 8, 3000, 5000);
+        System.out.println("--------------");
+        System.out.println(laptop);
+
     }
 
     private static void sortListZADemo() {

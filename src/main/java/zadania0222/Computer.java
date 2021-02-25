@@ -43,7 +43,7 @@ public class Computer implements Comparable<Computer>{
                 ", vendor: '" + vendor + '\'' +
                 ", model '" + model + '\'' +
                 ", ram " + ram +
-                "GB, procesorSpeed: " + procesorSpeed + "MHz\n";
+                "GB, procesorSpeed: " + procesorSpeed + "MHz";
     }
 
     public String getProcesor() {
