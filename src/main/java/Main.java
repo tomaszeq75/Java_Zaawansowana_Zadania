@@ -1,7 +1,32 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class Main {
     public static void main(String[] args) {
 
-        threadsDemo1();
+        System.out.println(StreamGenerator.generateStringsOfInts(10));
+        StreamGenerator.generate999();
+
+        StreamGenerator sg = new StreamGenerator();
+        List<Integer> ints = Stream.of(sg, sg, sg)
+                .flatMap(x -> x.values.stream())
+                .collect(Collectors.toList());
+        System.out.println(ints);
+
+        String[] znaki = "safdafsdasfdasfsdgafsdgfadgfaagsfdgfdafgasf".split(".");
+        System.out.println(Arrays.toString(znaki));
+
+//        Stream.of("safdafsdasfdasfsdgafsdgfadgfaagsfdgfdafgasf")
+//                .map(st -> st.split("."))
+//                .collect(Collectors.groupingBy(String::chars))
+//                .forEach((key, value) -> System.out.println(key + " " + value));
+    }
+
+    private static void nestedClassDemo() {
+        NestedClass nestedClass = new NestedClass();
     }
 
     private static void threadsDemo1() {
