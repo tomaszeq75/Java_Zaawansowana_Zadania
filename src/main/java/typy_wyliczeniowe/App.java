@@ -3,7 +3,27 @@ package typy_wyliczeniowe;
 public class App {
     public static void main(String[] args) {
 
+        zadanie_3();
 
+    }
+
+    private static void zadanie_3() {
+        int temp = 100;
+        System.out.println(temp + " C = " +
+                TemperatureConvert.convertTemperature('C', 'F', temp) + " F");
+        System.out.println(temp + " C = " +
+                TemperatureConvert.convertTemperature('C', 'K', temp) + " K");
+        System.out.println(temp + " F = " +
+                TemperatureConvert.convertTemperature('F', 'C', temp) + " C");
+        System.out.println(temp + " F = " +
+                TemperatureConvert.convertTemperature('F', 'K', temp) + " K");
+        System.out.println(temp + " K = " +
+                TemperatureConvert.convertTemperature('K', 'C', temp) + " C");
+        System.out.println(temp + " K = " +
+                TemperatureConvert.convertTemperature('K', 'F', temp) + " F");
+
+        System.out.println(temp + " S = " +
+                TemperatureConvert.convertTemperature('S', 'F', temp) + " F");
     }
 
     private static void zadanie_2() {
