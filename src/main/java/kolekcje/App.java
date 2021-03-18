@@ -3,7 +3,6 @@ package kolekcje;
 public class App {
     public static void main(String[] args) {
 
-
     }
 
     private static void zadanie_1_ok() {
@@ -16,8 +15,8 @@ public class App {
 
         ints.display();
 
-        System.out.println("remowed: " + ints.remove(1));
-        System.out.println("remowed: " + ints.remove(1));
+        System.out.println("removed: " + ints.remove(1));
+        System.out.println("removed: " + ints.remove(1));
         ints.display();
     }
 
