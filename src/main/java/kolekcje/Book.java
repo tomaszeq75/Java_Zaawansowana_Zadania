@@ -76,4 +76,9 @@ public class Book implements Comparable{
     public int compareTo(Object o) {
         return this.getTitle().compareTo(((Book) o).getTitle());
     }
+
+    @Override
+    public String toString() {
+        return '[' + title + ':' + price + ':' + releaseYear + ':' + authors + ':' + genre + ']';
+    }
 }

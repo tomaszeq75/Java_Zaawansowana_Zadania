@@ -1,8 +1,42 @@
 package kolekcje;
 
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) {
 
+        zadanie_2();
+    }
+
+    private static void zadanie_2() {
+        Author a1 = new Author("Don", "Brown", "male");
+        Author a2 = new Author("Stephen", "King", "male");
+        Author a3 = new Author("Jeni", "Rowling", "female");
+        Author a4 = new Author("Jon", "Snow", "male");
+        Author a5 = new Author("Unknown", "Unknown", "male");
+        Author a6 = new Author("Unknown", "Unknown", "female");
+
+        Book b1 = new Book("Harry Potter", 35, 2005, Arrays.asList(a1, a3), Genre.FANTASY);
+        Book b2 = new Book("Scarry", 30, 2000, Arrays.asList(a2, a1), Genre.ACTION);
+        Book b3 = new Book("Encyklopedia", 40, 1999, Arrays.asList(a4, a5, a6), Genre.CRIME);
+        Book b4 = new Book("Encyklopedia", 40, 1999, Arrays.asList(a4, a5, a6), Genre.FANTASY);
+
+        BookService bookService = new BookService();
+        bookService.add(b1);
+        bookService.add(b2);
+        bookService.add(b3);
+
+        System.out.println(bookService.getBooks());
+        System.out.println(bookService.getBooksByGenre(Genre.FANTASY));
+        System.out.println(bookService.getBooksReleasedBefore(2000));
+        System.out.println(bookService.getMostExpensive());
+        System.out.println(bookService.getLeastExpensive());
+        System.out.println(bookService.getBooksWithAtLeastAuthors(3));
+        System.out.println(bookService.getStoredByTile(SortingOrder.ASCENDING));
+        System.out.println(bookService.getStoredByTile(SortingOrder.DESCENDING));
+        System.out.println(bookService.isBookIn(b1));
+        System.out.println(bookService.isBookIn(b4));
+        System.out.println(bookService.getBooksByAuthor(a1));
     }
 
     private static void zadanie_1_ok() {
