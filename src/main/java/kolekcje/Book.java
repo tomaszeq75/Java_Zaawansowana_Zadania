@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-public class Book implements Comparable{
+public class Book implements Comparable<Book>{
     private String title;
     private double price;
     private int releaseYear;
@@ -73,8 +73,8 @@ public class Book implements Comparable{
     }
 
     @Override
-    public int compareTo(Object o) {
-        return this.getTitle().compareTo(((Book) o).getTitle());
+    public int compareTo(Book o) {
+        return title.compareTo(o.getTitle());
     }
 
     @Override

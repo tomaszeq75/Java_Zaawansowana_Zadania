@@ -37,6 +37,9 @@ public class App {
         System.out.println(bookService.isBookIn(b1));
         System.out.println(bookService.isBookIn(b4));
         System.out.println(bookService.getBooksByAuthor(a1));
+        System.out.println(bookService.remove(b2));
+        System.out.println(bookService.getBooks());
+
     }
 
     private static void zadanie_1_ok() {
